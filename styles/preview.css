@@ -1,0 +1,22 @@
+#preview-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #282828;
+  border: 1px solid #ffff;
+}
+
+#preview-container:hover {
+  border: 3px outset #ffff;
+
+}
+
+#previewImg {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  z-index: 1000;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <link href="/styles/navbar.css"
+      rel="stylesheet">
+    <link href="/styles/index.css"
+      rel="stylesheet">
+    <link href="/styles/usuarios.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="/bootstrap/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <!--Navbar remover-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+      <div class="container-fluid">
+        <img src="/imagens/mybooks.svg"
+          class="d-none d-lg-block"
+          alt="">
+
+        <button class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="#">HOME</a>
+
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="/src/usuarios.html">USUÁRIOS</a>
+            </li>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control navbar-input"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar">
+            <button class="btn btn-outline-success btn-pesquisa"
+              type="submit">
+
+              <img src="/imagens/search.svg"
+                alt="">
+
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <h2 class="titulo mt-4 mb-4">Usuários</h2>
+
+      <div class="card-container mt-3">
+
+        <div class="foto-thumb hover-thumb me-2">
+          <img src="/imagens/foto-neymar.jpg"
+            alt="">
+        </div>
+
+        <div class="card w-50">
+          <div class="card-body">
+            <div class="card-title-mybooks">
+              <div class="card-title-decoration"></div>
+              <h3>Davi</h3>
+            </div>
+            <p class="card-text">
+              302694
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <a class="btn btn-outline-info"
+              href="${pageContext.request.contextPath}/gerenciar_usuario.do?acao=alterar&id=${usuario.id}">
+              <img src="/imagens/editar.svg"
+                alt="caneta dentro de um quadrado verde">
+            </a>
+
+            <button class="btn btn-outline-danger"
+              onclick="confirmarExclusao('${usuario.nome}', '/projetojava3_war_exploded/gerenciar_usuario.do?acao=deletar&id='+'${usuario.id}')">
+              <img src="/imagens/lixeira.svg"
+                alt="lixeira dentro de um quadrado vermelho">
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+      let thumb = document.querySelector('.foto-thumb');
+      thumb.addEventListener('click', () => {
+        location.href = 'conta.html';
+      });
+    </script>
+
+  </body>
+
+</html>

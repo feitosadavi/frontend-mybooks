@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <link href="/styles/navbar.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="/bootstrap/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+      <div class="container-fluid">
+        <img src="/imagens/mybooks.svg"
+          class="d-none d-lg-block"
+          alt="">
+
+        <button class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="#">HOME</a>
+
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="/src/usuarios.html">USUÁRIOS</a>
+            </li>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control navbar-input"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar">
+            <button class="btn btn-outline-success btn-pesquisa"
+              type="submit">
+
+              <img src="/imagens/search.svg"
+                alt="">
+
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </nav>
+
+    <img src="/imagens/mybooks.svg"
+      class="d-lg-none mt-3 ms-3"
+      alt="">
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/scripts/preview.js"></script>
+    <script>
+      mostrarPreview()
+    </script>
+  </body>
+
+</html>
