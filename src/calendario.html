@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <link href="/styles/navbar.css"
+      rel="stylesheet">
+    <link href="/styles/main.css"
+      rel="stylesheet">
+    <link href="/styles/usuarios.css"
+      rel="stylesheet">
+    <link href="/styles/calendario.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="/bootstrap/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="calendario__wrapper">
+      <div class="calendario">
+        <div class="sidebar">
+          <h3 class="dia__mes__title">27</h3>
+          <h5 class="dia__semana__title">THURSDAY</h5>
+        </div>
+
+        <div class="calendario__main">
+          <nav class="calendario__nav">
+            <div class="meses">
+              <a href="?mes=1"
+                class="mes">Jan</a>
+              <a href="?mes=2"
+                class="mes">Fev</a>
+              <a href="?mes=3"
+                class="mes">Mar</a>
+              <a href="?mes=4"
+                class="mes">Abr</a>
+              <a href="?mes=5"
+                class="mes">Mai</a>
+              <a href="?mes=6"
+                class="mes">Jun</a>
+              <a href="?mes=7"
+                class="mes">Jul</a>
+              <a href="?mes=8"
+                class="mes">Ago</a>
+              <a href="?mes=9"
+                class="mes">Set</a>
+              <a href="?mes=10"
+                class="mes">Out</a>
+              <a href="?mes=11"
+                class="mes">Nov</a>
+              <a href="?mes=12"
+                class="mes">Dez</a>
+            </div>
+
+            <hr />
+
+            <div class="dias__semana">
+              <p>SEG</p>
+              <p>TER</p>
+              <p>QUA</p>
+              <p>QUI</p>
+              <p>SEX</p>
+              <p>SAB</p>
+              <p>DOM</p>
+            </div>
+          </nav>
+
+          <div class="semana">
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+            <div class="dia">05</div>
+            <div class="dia">06</div>
+            <div class="dia">07</div>
+          </div>
+          <div class="semana">
+            <div class="dia">08</div>
+            <div class="dia">09</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia">14</div>
+          </div>
+          <div class="semana">
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia">21</div>
+          </div>
+          <div class="semana">
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia">28</div>
+          </div>
+          <div class="semana">
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      let dias = document.getElementsByClassName('dia');
+      for (dia of dias) {
+        dia.onclick = ativar;
+      }
+
+      function ativar() {
+        let ativo = false;
+        if (ativo) {
+          this.className = 'dia';
+        } else {
+          this.className += ' ativo';
+        }
+        ativo = !ativo;
+      }
+    </script>
+
+  </body>
+
+</html>

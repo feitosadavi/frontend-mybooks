@@ -2,7 +2,7 @@ let previewContainer = document.getElementById('preview-container');
 function mostrarPreview () {
   let preview = document.getElementById('preview');
 
-  previewContainer.addEventListener('click', () => {
+  previewContainer && previewContainer.addEventListener('click', () => {
     removerImagem(preview)
     preview.click();
   })

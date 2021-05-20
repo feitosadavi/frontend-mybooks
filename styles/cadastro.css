@@ -1,17 +1,3 @@
-@import 'main.css';
-@import 'preview.css';
-
-.form-container {
-  background-color: var(--azul-escuro);
-  height: 100vh;
-}
-
-.form {
-  background-color: var(--roxo-claro);
-  width: 100%;
-  padding: 5rem;
-}
-
 .logo {
   letter-spacing: .5rem;
 }
@@ -24,12 +10,6 @@
 
 .camera-icone {
   width: 2.5rem;
-}
-
-.form-mybooks {
-  background-color: var(--preto-fosco) !important;
-  border: 0 !important;
-  color: white !important;
 }
 
 .btn-cadastro {

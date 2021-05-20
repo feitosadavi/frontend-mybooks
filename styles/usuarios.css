@@ -1,4 +1,8 @@
-@import 'main.css';
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card {
   width: 50%;

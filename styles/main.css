@@ -87,3 +87,7 @@ code {
 .bg-azul-escuro {
   background-color: #0C0032 !important;
 }
+
+.bg-roxo-claro {
+  background-color: var(--roxo-claro) !important;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+      href="/styles/main.css">
+    <link href="/styles/formulario.css"
+      rel="stylesheet">
+    <link href="/styles/listar.css"
+      rel="stylesheet">
+    <link href="/styles/navbar.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="/bootstrap/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <!--Navbar remover-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+      <div class="container-fluid">
+        <img src="/imagens/mybooks.svg"
+          class="d-none d-lg-block"
+          alt="">
+
+        <button class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="#">HOME</a>
+
+            <li class="nav-item mt-lg-0 mt-3 ms-lg-3">
+              <a class="nav-link active"
+                aria-current="page"
+                href="/src/usuarios.html">USUÁRIOS</a>
+            </li>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control navbar-input"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar">
+            <button class="btn btn-outline-success btn-pesquisa"
+              type="submit">
+
+              <img src="/imagens/search.svg"
+                alt="">
+
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="livro-container mt-5">
+        <a data-bs-toggle="modal"
+          data-bs-target="#livro-info">
+          <img class="thumb-livro"
+            src="/imagens/ladrao-de-raios-capa.jpg"
+            alt="">
+        </a>
+      </div>
+      <div class="livro-container mt-5">
+        <a data-bs-toggle="modal"
+          data-bs-target="#livro-info">
+          <img class="thumb-livro"
+            src="/imagens/ladrao-de-raios-capa.jpg"
+            alt="">
+        </a>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade"
+        id="livro-info"
+        tabindex="-1"
+        aria-labelledby="livro-info-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+              <h5 class="modal-title align-self-center mb-3"
+                id="livro-info-label">${livro.nome}</h5>
+
+              <img src="/imagens/ladrao-de-raios-capa.jpg"
+                alt="capa do livro"
+                class="modal-capa align-self-center">
+
+              <button class="btn btn-cadastro">Alugar</button>
+
+              <div class="info-livro d-flex justify-content-between mt-4">
+                <div class="d-flex">
+                  <p>${livro.paginas}|</p>
+                  <p>${livro.estoque}|</p>
+                  <p>${livro.lancamento}</p>
+                </div>
+
+                <div class="">
+                  <p>${livro.genero}</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer d-flex">
+              <a class="btn btn-outline-info"
+                href="${pageContext.request.contextPath}/gerenciar_menu.do?acao=alterar&id=${menu.id}">
+                <img src="${pageContext.request.contextPath}/imagens/editar.svg"
+                  alt="caneta dentro de um quadrado verde">
+              </a>
+
+              <button class="btn btn-outline-danger"
+                onclick="confirmarExclusao('${menu.nome}', '/projetojava3_war_exploded/gerenciar_menu.do?acao=deletar&id='+'${menu.id}')">
+                <img src="${pageContext.request.contextPath}/imagens/lixeira.svg"
+                  alt="lixeira dentro de um quadrado vermelho">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/scripts/preview.js"></script>
+    <script>
+      mostrarPreview()
+    </script>
+  </body>
+
+</html>

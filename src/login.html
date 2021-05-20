@@ -6,18 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+      href="/styles/main.css">
+    <link href="/styles/formulario.css"
+      rel="stylesheet">
     <link href="/styles/navbar.css"
-      rel="stylesheet">
-    <link href="/styles/main.css"
-      rel="stylesheet">
-    <link href="/styles/usuarios.css"
       rel="stylesheet">
     <link rel="stylesheet"
       href="/bootstrap/css/bootstrap.min.css">
   </head>
 
   <body>
-
     <!--Navbar remover-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
       <div class="container-fluid">
@@ -69,54 +68,52 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
+      <div class="row">
 
-      <h2 class="titulo mt-4 mb-4">Usuários</h2>
+        <div class="d-flex justify-content-center">
+          <div class="col-12 col-lg-5 form-container">
+            <h2 class="titulo mt-4 mb-4">Login</h2>
 
-      <div class="card-container mt-3">
+            <form class="form"
+              action="">
 
-        <div class="foto-thumb hover-thumb me-2">
-          <img src="/imagens/foto-neymar.jpg"
-            alt="">
-        </div>
+              <div class="row mb-3 mt-5">
 
-        <div class="card w-50">
-          <div class="card-body">
-            <div class="card-title-mybooks">
-              <div class="card-title-decoration"></div>
-              <h3>Davi</h3>
-            </div>
-            <p class="card-text">
-              302694
-            </p>
-          </div>
+                <input type="email"
+                  class="form-control form-mybooks mb-3"
+                  placeholder="Seu email"
+                  required>
 
-          <div class="card-footer">
-            <a class="btn btn-outline-info"
-              href="${pageContext.request.contextPath}/gerenciar_usuario.do?acao=alterar&id=${usuario.id}">
-              <img src="/imagens/editar.svg"
-                alt="caneta dentro de um quadrado verde">
-            </a>
+                <input type="password"
+                  class="form-control form-mybooks mb-3"
+                  placeholder="Sua senha"
+                  required>
+                <p class="text-secondary">Não possui login? <a href="">Cadastre-se</a></p>
 
-            <button class="btn btn-outline-danger"
-              onclick="confirmarExclusao('${usuario.nome}', '/projetojava3_war_exploded/gerenciar_usuario.do?acao=deletar&id='+'${usuario.id}')">
-              <img src="/imagens/lixeira.svg"
-                alt="lixeira dentro de um quadrado vermelho">
-            </button>
+              </div>
+
+              <input type="checkbox"
+                id="lembrar"
+                name="lembrar">
+              <label class="ms-1 text-white"
+                for="lembrar">Lembre-se de mim</label>
+
+              <a href="navbar.html"
+                class="btn btn-dark bg-azul-escuro w-100 mt-4">Entrar</a>
+
+            </form>
           </div>
         </div>
 
       </div>
-
     </div>
 
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/scripts/preview.js"></script>
     <script>
-      let thumb = document.querySelector('.foto-thumb');
-      thumb.addEventListener('click', () => {
-        location.href = 'conta.html';
-      });
+      mostrarPreview()
     </script>
-
   </body>
 
 </html>

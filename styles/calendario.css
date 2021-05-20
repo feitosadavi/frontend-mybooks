@@ -1,0 +1,120 @@
+/*
+
+  
+
+*/ 
+.calendario__wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(225, 220, 220);
+}
+
+.calendario {
+  display: flex;
+  margin-top: 5rem;
+  width: 50rem;
+  height: 30rem;
+}
+
+/*
+
+  Barra lateral do calendário
+
+*/ 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--roxo-claro);
+  color: #fff;
+  flex: 1;
+}
+
+.dia__mes__title {
+  font-size: 60pt;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.dia__semana__title {
+  margin-top: -16px;
+  text-align: center;
+  font-size: 10pt;
+  margin-right: .9rem;
+  font-weight: 900;
+}
+
+/*
+
+  Navegação do calendário
+
+*/ 
+.calendario__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1rem;
+  flex: 3;
+}
+
+/* //Seção dos meses//  */
+.meses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mes {
+  padding: .4rem;
+}
+
+.mes {
+  color: var(--preto-fosco);
+  text-decoration: none;
+}
+
+/* //Seção dos dias da semana//  */
+.dias__semana {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+
+  Dias do calendário
+
+*/
+.semana {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dias {
+  display: flex;
+  flex-direction: column;
+}
+
+.dia {
+  padding: .5rem;
+}
+
+.dia:hover {
+  background-color: rgba(95, 95, 95, 0.165);
+  border-radius: 100%;
+}
+
+.ativo {
+  color: #fff;
+  background-color: var(--roxo-claro);
+  border-radius: 100%;
+}
+
+.ativo:hover {
+  color: #fff;
+  background-color: #3500d3c4;
+  border-radius: 100%;
+}
